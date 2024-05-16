@@ -1,0 +1,11 @@
+Interesting Positions in the Mandelbrot Set
+
+Southwest 			Corner Size 	Notes
+-2.0-1.25i			2.5		Full set
+-1.0 + 0.25i			0.0625		Size is 1/16 unit
+-0.91 + 0.21875i		0.0625		Shift horizontally toward origin
+-0.87875 + 0.25125i		0.00390625	Shift further right and up a little
+-0.876796875 + 0.253203125i	0.001953125	Zoom in some (slight shift)
+-0.876796875 + 0.25369140625i	0.0009765625	Zoom in by half
+-0.876796875 + 0.25369140625i	0.00048828125	Zoom in by half again
+-0.876796875 + 0.25369140625i	0.00024414062	Zoom in by half again
