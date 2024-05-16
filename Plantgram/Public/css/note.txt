@@ -1,0 +1,3 @@
+Your style sheets go in this directory.  After you create your
+first stylesheet, delete this file before you push the new 
+files back to the repo.

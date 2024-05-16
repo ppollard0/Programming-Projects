@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantgram - About</title>
+
+    <!-- Bootstrap Stuff-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous">
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+       crossorigin="anonymous">
+      </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous">
+    </script>
+
+    <!--CSS-->
+    <link href="../css/theme.css" rel="stylesheet">
+    <script src="../js/home.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+            <a href="index.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 ms-3 text-dark text-decoration-none">
+                <img src="../images/Plantgram_Logo.png" alt="Plantgram Logo">
+            </a>
+            <h1>Plantgram</h1>
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="../index.html" class="nav-link px-2 link-warning">Home</a></li>
+                <li><a href="catalog.html" class="nav-link px-2 link-warning">Catalog</a></li>
+                <li><a href="clubs.html" class="nav-link px-2 link-warning">Clubs</a></li>
+                <li><a href="about.html" class="nav-link px-2 link-warning">About</a></li>
+            </ul>
+            
+            <div class="col-5 col-sm-12 text-end" id="account">
+                <button 
+                    type="button" 
+                    class="btn btn-warning me-3" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#accountLogin">
+                        Account
+                </button>
+            </div>
+            <!-- Login Modal -->
+            <div 
+                class="modal fade" 
+                id="accountLogin" 
+                tabindex="-1" 
+                aria-labelledby="accountActions" 
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="login">Sign-In</h5>
+                            <button 
+                            type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <form id="signInForm" method="POST" action="https://wp.zybooks.com/form-viewer.php">
+                                <div class="row mb-4">
+                                <div class="col d-flex justify-content-start">
+                                    <label for="emailSU" class="form-label mx-md-3">E-mail:</label>
+                                    <input
+                                        class="form-contol"
+                                        type="email"
+                                        id="eMail"
+                                        placeholder="example@domian.com"
+                                        required
+                                    />
+                                </div>
+                                </div>
+                                <div class="row mb-4">
+                                <div class="col d-flex justify-content-start">
+                                    <label for="pass" class="form-label mx-md-3">Password:</label>
+                                    <input
+                                        class="form-contol"
+                                        type="password"
+                                        id="pass"
+                                        required
+                                    />
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning">Login</button>
+                            <button 
+                                type="button" 
+                                class="btn btn-outline-warning" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#accountSignUp">
+                                    Create an Account
+                            </button>
+                            <button 
+                                type="button" 
+                                class="btn btn-outline-secondary" 
+                                data-bs-dismiss="modal">
+                                    Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sign-Up Modal-->
+            <div 
+                class="modal fade" 
+                id="accountSignUp" 
+                tabindex="-1" 
+                aria-labelledby="accountSignUp" 
+                aria-hidden="true">
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="sUTitle">Create an Account</h5>
+                        </div>
+
+                        <div class="modal-body">
+                            <form id="signInForm" method="POST" action="https://wp.zybooks.com/form-viewer.php"></form>
+                                <div class="row mb-4">
+                                    <div class="col d-flex justify-content-center">
+                                        <label class="form-label justify-content-start" for=""></label>
+                                        <input
+                                        class="form-contol justify-content-center"
+                                        type="text"
+                                        id="fSignUp"
+                                        placeholder="John"
+                                        required
+                                        />
+                                    </div>
+                                    <div class="col d-flex justify-content-center">
+                                    <label class="form-label justify-content-start" for=""></label>
+                                        <input
+                                            class="form-contol"
+                                            type="text"
+                                            id="lSignUp"
+                                            placeholder="Doe"
+                                            required
+                                        >
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col d-flex justify-content-start">
+                                    <label for="emailSU" class="form-label mx-md-3">E-mail:</label>
+                                    <input
+                                        class="form-contol"
+                                        type="email"
+                                        id="emailSU"
+                                        placeholder="example@domian.com"
+                                        required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col d-flex justify-content-start">
+                                    <label for="passWrd" class="form-label mx-md-3">Password:</label>
+                                    <input
+                                        class="form-contol"
+                                        type="password"
+                                        id="passWrd"
+                                        required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col d-flex justify-content-start">
+                                    <label for="repass" class="form-label mx-md-3">Re-type Password:</label>
+                                    <input
+                                        class="form-contol ms-1"
+                                        type="password"
+                                        id="rePass"
+                                        required
+                                        />  
+                                    </div>
+                                </div>
+                                <div class="alert alert-danger d-flex align-items-center d-none" id="wrongPass" role="alert">
+                                    <div>
+                                    <i class="bi bi-exclamation-triangle-fill error2"></i>&nbsp;&nbsp;Passwords must match.
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning">Sign-Up</button>
+                            <button 
+                                type="button" 
+                                class="btn btn-outline-warning" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#accountLogin">
+                                    Log-in
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                    Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <div class="col col-12" id="p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin est nisi, efficitur eget volutpat 
+            eu, sagittis sed massa. Duis a quam ac sem dictum placerat. Morbi ac vulputate eros. Fusce enim 
+            diam, aliquam eget tellus sit amet, cursus ultricies nibh. Duis viverra varius nunc nec 
+            ullamcorper. Fusce porttitor vel ante ullamcorper convallis. Aenean quam dolor, fringilla et 
+            eleifend eu, ullamcorper ut libero. Pellentesque maximus cursus sem, lobortis auctor lectus 
+            placerat ut. Aenean vitae odio enim. Nunc ac consectetur risus. Nulla eu metus non massa ornare 
+            ultrices at sit amet odio. Phasellus vehicula erat quis dictum faucibus. Quisque vestibulum, nunc 
+            ac pulvinar blandit, enim libero suscipit metus, sagittis semper lectus ipsum sed nisi. Phasellus 
+            sit amet dapibus lacus, sed faucibus enim. Cras eu metus felis. Curabitur sollicitudin purus ut 
+            massa sagittis, ac aliquet orci suscipit. Nunc ut elementum urna. Nam vestibulum massa tortor, 
+            sit amet tempor lacus finibus vel. Sed fermentum metus lacinia odio tempus imperdiet. Vestibulum 
+            faucibus tempor eros, auctor cursus dolor ultrices a. Curabitur euismod diam id maximus bibendum. 
+            Nunc tempor magna enim, in venenatis ante ullamcorper vitae. Ut dui urna, aliquet a cursus quis, 
+            bibendum blandit ligula. Curabitur ante ex, viverra sit amet malesuada et, imperdiet ut ante. 
+            Cras malesuada ornare lorem. Suspendisse potenti. Etiam ullamcorper est ac felis convallis, 
+            vitae commodo augue porttitor. Nullam euismod arcu at metus tincidunt, id porttitor ipsum semper. 
+            Pellentesque erat elit, faucibus vitae nulla a, dictum ullamcorper sapien. Nam ullamcorper 
+            facilisis sapien, consequat viverra tortor. Aenean id dictum leo. In semper, mi id congue 
+            hendrerit, dui nulla fermentum lectus, sed interdum arcu mi in purus. Nullam auctor, libero ut 
+            vehicula egestas, urna magna rutrum mauris, a auctor augue dui vel ligula. Etiam ac justo ex. 
+            Sed volutpat mi vitae sapien rhoncus, ac rutrum nulla ultricies. Donec sed vulputate odio, ac 
+            pulvinar tellus. Curabitur viverra erat vel neque suscipit bibendum. Cras lobortis tortor 
+            volutpat, mollis quam at, iaculis ipsum. Maecenas at vulputate eros. Pellentesque aliquet, 
+            eros vitae blandit consectetur, ipsum purus suscipit lacus, ac iaculis libero libero eget 
+            velit. Pellentesque in velit nisi. Sed imperdiet enim a nulla placerat, placerat luctus ex 
+            molestie. Ut metus nisi, suscipit non nunc eget, consequat finibus enim. Vivamus sit amet 
+            gravida velit, ac aliquet purus. Etiam id arcu ut tortor porta dapibus. Aliquam sollicitudin 
+            varius massa non eleifend. Proin mattis nibh a ligula convallis feugiat. Cras imperdiet 
+            tincidunt purus non efficitur. Fusce leo lacus, mollis porttitor pellentesque et, finibus 
+            vitae leo. Morbi nec tincidunt nunc. Ut tristique velit eget posuere accumsan. Nulla in dui 
+            quis tortor tempor luctus non vitae nisi. Morbi non ligula ac ligula faucibus sollicitudin. 
+            Ut non libero quam. Pellentesque rhoncus a tellus eu lacinia. Nullam porta pharetra felis. 
+            Cras odio diam, interdum eu arcu eget, consequat ultricies risus. Vestibulum sit amet dignissim 
+            felis. Nunc vitae ante iaculis, finibus purus at, tincidunt tellus. Pellentesque vel consequat 
+            nulla. Pellentesque vitae fringilla elit, ut maximus ex. Duis vehicula erat mauris, sit amet 
+            mollis ex molestie sed. Suspendisse potenti. Sed id viverra felis. Nulla facilisi. Aliquam 
+            blandit eu nunc et porttitor. In ac turpis ex. Fusce ut justo lacus. Morbi sagittis felis eget 
+            sem finibus molestie. Nulla eu erat mi. Nunc rutrum at orci at vulputate. Sed sed euismod odio, 
+            in tempus urna. Etiam aliquet risus augue, sit amet viverra risus venenatis nec. Donec 
+            scelerisque, magna non pharetra tincidunt, risus eros ultricies diam, sed tristique ipsum urna 
+            sed ipsum. Cras malesuada tempus condimentum. Morbi eget enim blandit, placerat enim sit amet, 
+            malesuada arcu. Praesent sit amet turpis nec diam elementum aliquam. Ut lacinia nulla tellus, 
+            eget malesuada dui pellentesque id. Nullam et nisl porttitor, aliquet odio ac, auctor ex. 
+            Suspendisse facilisis, mauris volutpat pellentesque fermentum, ex arcu interdum lorem, 
+            sollicitudin tincidunt tortor felis a elit. Nullam imperdiet magna vitae risus tempor, a tempor 
+            enim ultricies. Ut mattis elementum nulla, non feugiat eros blandit ac. Fusce eget orci 
+            fringilla magna volutpat sodales a vel est. Ut lectus libero, porta pellentesque orci eu, 
+            porttitor semper ex. Donec aliquam risus orci, non scelerisque diam venenatis sit amet. Sed 
+            ornare tortor a leo hendrerit tincidunt. Suspendisse potenti. Nullam aliquam molestie augue sit 
+            amet rutrum. Suspendisse pretium at quam pellentesque cursus. Vivamus tincidunt tortor sed nisi 
+            egestas, eu lacinia magna sagittis. Cras vel tempus massa, hendrerit porttitor sapien. 
+            Pellentesque ornare felis at est sodales sollicitudin. Etiam tristique, felis a porttitor 
+            faucibus, sem diam hendrerit velit, eget pharetra tellus ante a ante. Vestibulum viverra odio 
+            mattis elit aliquet, lobortis pellentesque mauris interdum. Etiam malesuada blandit feugiat. 
+            Vestibulum sed vehicula risus. Nulla sit amet lacus tempus, fermentum velit a, lacinia ante. 
+            Morbi sit amet sodales tortor. Morbi commodo ut ante ut posuere. Phasellus metus tortor, 
+            venenatis ac urna ut, malesuada commodo enim. Fusce magna dui, molestie quis tellus ut, mollis 
+            consequat tellus. Donec sit amet vestibulum sapien. Quisque quis eros urna. Integer nec sapien 
+            tellus. Ut non erat eu magna efficitur faucibus. Pellentesque pretium egestas iaculis. Maecenas 
+            luctus suscipit metus, et accumsan nunc tristique quis. Etiam varius, augue id lobortis 
+            elementum, erat erat bibendum neque, ut ultricies ipsum lorem pellentesque neque. Nam quis 
+            dignissim justo, ut luctus urna. Donec eu urna tellus. Vestibulum vel hendrerit leo. Donec 
+            imperdiet maximus sollicitudin. Phasellus et odio tempor, varius tellus at, pulvinar enim. Morbi 
+            quis viverra metus. Cras auctor orci dui, non hendrerit mi scelerisque quis. Duis volutpat 
+            fringilla mi. Phasellus nec felis elit. Nam vitae eros iaculis libero fermentum euismod. Mauris 
+            vel urna a lorem pellentesque scelerisque ac non felis. Proin ut lacus maximus, efficitur arcu 
+            nec, consequat felis. Integer iaculis libero eu metus maximus, sed commodo mi condimentum. 
+            Phasellus id orci augue. Pellentesque ultrices dapibus felis id euismod. Praesent aliquam 
+            placerat malesuada. Curabitur dolor quam, rutrum vitae lorem id, congue efficitur mi. Sed sit 
+            amet faucibus libero. Aliquam erat volutpat. Pellentesque porttitor mi at elit pellentesque, 
+            eget venenatis velit fermentum. Donec elit nulla, gravida sit amet sollicitudin quis, commodo 
+            at odio. Vivamus malesuada sagittis porta. Aenean leo justo, egestas ullamcorper dolor vel, 
+            eleifend mollis massa. Fusce at rutrum arcu, ut vulputate justo. Integer suscipit consequat 
+            efficitur.
+        </div>
+    </div>
+    
+    <footer class="d-flex flex-wrap align-items-left">
+        <p>&copy; 2021 Paul Pollard</p>
+    </footer>
+</body>
+
+</html>

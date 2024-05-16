@@ -1,0 +1,68 @@
+:root {
+    --mainColor: darkgreen;
+    --secondaryColor: #50C878;
+    --tertiaryColor: #FFFFFF;
+    --letters: #f0ad4e;
+}
+header, footer {
+    background-color: var(--mainColor);
+    color: var(--letters);
+}
+header {
+    background: linear-gradient(var(--mainColor), var(--secondaryColor), var(--mainColor));
+    border-bottom: 5px;
+    width: 100%;
+}
+header img {
+    max-width: 125px;
+}
+#siteName {
+    font-weight: bold;
+}
+#accountForm {
+    background: var(--tertiaryColor);
+    border: 5px solid var(--mainColor);
+    border-radius: 10px;
+    text-align: center;
+}
+input {
+    background: var(--tertiaryColor);
+    border: 1px solid var(--mainColor);
+    border-radius: 10px;
+}
+footer {
+    color: var(--letters);
+    width: 100%;
+}
+footer p {
+    margin-left: 25px;
+}
+body {
+    background: linear-gradient(to bottom,var(--tertiaryColor), var(--tertiaryColor), var(--tertiaryColor), var(--tertiaryColor), var(--tertiaryColor), var(--mainColor));
+    background-repeat: no-repeat;
+}
+#p {
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--tertiaryColor);
+    border: 5px solid var(--mainColor);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+}
+#main {
+    min-height: 500px;
+}
+a {
+    color: var(--tertiaryColor);
+}
+#nav {
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    right: 25px;
+}
+#nav li {
+    display: inline;
+}

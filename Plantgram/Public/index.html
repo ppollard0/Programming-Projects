@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantgram - Home</title>
+    <link rel="shortcut icon" href="images/Plantgram_Logo.png">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous">
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+       crossorigin="anonymous">
+      </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous">
+    </script>
+
+    <!--CSS & JS-->
+    <link href="css/theme.css" rel="stylesheet">
+    <script src="js/home.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+                <a href="index.html" class="d-flex align-items-center col-3 text-dark text-decoration-none">
+                <img src="images/Plantgram_Logo.png" alt="Plantgram Logo">
+            </a>
+            <h1 class="header-title col-3 justify-content-center" id="siteName">Plantgram</h1>
+            <div class="col-3"></div>
+            <ul class="nav col-5 col-sm-12 mb-2 justify-content-Start mb-md-0">
+                <li><a href="index.html" class="nav-link px-2 link-warning">Home</a></li>
+                <li><a href="pages/catalog.html" class="nav-link px-2 link-warning">Catalog</a></li>
+                <li><a href="pages/clubs.html" class="nav-link px-2 link-warning">Clubs</a></li>
+                <li><a href="pages/about.html" class="nav-link px-2 link-warning">About</a></li>
+            </ul>
+            
+            <div class="col-5 col-sm-12 text-end" id="account">
+                <button 
+                    type="button" 
+                    class="btn btn-warning me-3" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#accountLogin">
+                        Account
+                </button>
+            </div>
+            <!-- Login Modal -->
+            <div 
+                class="modal fade" 
+                id="accountLogin" 
+                tabindex="-1" 
+                aria-labelledby="accountActions">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="login">Sign-In</h5>
+                            <button 
+                            type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            </button>
+                        </div>
+                        
+                        <!-- Form -->
+                        <div class="modal-body">
+                            <form id="signInForm" method="POST" action="localhost:3000/api/auth">
+                                <div class="row mb-4">
+                                <div class="col d-flex justify-content-start">
+                                    <label for="eMail" class="form-label mx-md-3">E-mail:</label>
+                                    <input
+                                        class="form-contol"
+                                        type="email"
+                                        id="eMail"
+                                        name="eMail"
+                                        placeholder="example@domian.com"
+                                        required
+                                    />
+                                </div>
+                                </div>
+                                <div class="row mb-4">
+                                <div class="col d-flex justify-content-start">
+                                    <label for="pass" class="form-label mx-md-3">Password:</label>
+                                    <input
+                                        class="form-contol"
+                                        type="password"
+                                        id="pass"
+                                        name="pass"
+                                        required
+                                    />
+                                </div>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-outline-warning">Login</button>
+                                    <button 
+                                        type="button" 
+                                        class="btn btn-outline-warning" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#accountSignUp">
+                                            Create an Account
+                                    </button>
+                                    <button 
+                                        type="button" 
+                                        class="btn btn-outline-secondary" 
+                                        data-bs-dismiss="modal">
+                                            Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sign-Up Modal-->
+            <div 
+                class="modal fade" 
+                id="accountSignUp" 
+                tabindex="-1" 
+                aria-labelledby="accountSignUp">
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="sUTitle">Create an Account</h5>
+                        </div>
+                        
+                        <!-- Form -->
+                        <div class="modal-body">
+                            <form id="signUpForm" method="POST" action="localhost:3000/createUser">
+                                <div class="row mb-4">
+                                    <div class="col d-flex justify-content-start">
+                                        <label class="form-label justify-content-start" for="fSignUp">First Name:</label>
+                                        <input
+                                        class="form-contol justify-content-start"
+                                        type="text"
+                                        id="fSignUp"
+                                        name="first"
+                                        placeholder="John"
+                                        required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col d-flex justify-content-start">
+                                    <label class="form-label justify-content-start" for="lSignUp">Last Name:</label>
+                                        <input
+                                            class="form-contol"
+                                            type="text"
+                                            id="lSignUp"
+                                            name="last"
+                                            placeholder="Doe"
+                                            required
+                                        >
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col d-flex justify-content-start">
+                                    <label for="emailSU" class="form-label mx-md-3">E-mail:</label>
+                                    <input
+                                        class="form-contol"
+                                        type="email"
+                                        id="emailSU"
+                                        name="emailSU"
+                                        placeholder="example@domian.com"
+                                        required
+                                        />
+                                    </div>
+                                </div>
+                                <div 
+                                    class="alert alert-danger d-flex align-items-center d-none" 
+                                    id="wrongMail" 
+                                    role="alert">
+                                    <div>
+                                    <i 
+                                        class="bi bi-exclamation-triangle-fill error2">
+                                    </i>&nbsp;&nbsp;Email already in use.
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col d-flex justify-content-start">
+                                    <label for="passWrd" class="form-label mx-md-3">Password:</label>
+                                    <input
+                                        class="form-contol"
+                                        type="password"
+                                        id="passWrd"
+                                        name="passWrd"
+                                        required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col d-flex justify-content-start">
+                                    <label for="repass" class="form-label mx-md-3">Re-type Password:</label>
+                                    <input
+                                        class="form-contol ms-1"
+                                        type="password"
+                                        id="rePass"
+                                        name="rePass"
+                                        required
+                                        />  
+                                    </div>
+                                </div>
+                                <div 
+                                    class="alert alert-danger d-flex align-items-center d-none" 
+                                    id="wrongPass" 
+                                    role="alert">
+                                    <div>
+                                    <i 
+                                        class="bi bi-exclamation-triangle-fill error2">
+                                    </i>&nbsp;&nbsp;Passwords must match.
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col d-flex justify-content-start">
+                                        <label class="form-label justify-content-start" for="sUAbout">About:</label>
+                                        <input
+                                        class="form-contol justify-content-start"
+                                        type="text"
+                                        id="sUAbout"
+                                        name="aboutYou"
+                                        placeholder="Tell your story."
+                                        />
+                                    </div>
+                                </div>
+                                    <!-- Buttons -->
+                                <div class="modal-footer">
+                                    <button 
+                                        type="submit" 
+                                        for="signUpForm" 
+                                        class="btn btn-outline-warning" 
+                                        value="Save">
+                                            Sign-Up
+                                    </button>
+                                    <button 
+                                        type="button" 
+                                        class="btn btn-outline-warning" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#accountLogin">
+                                            Log-in
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                            Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main>
+        <div class="container">
+            <h2 id="siteName">Plantgram</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center">
+                <div class="col col-sm-12 col-md-5" id="p">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lacus nec orci 
+                    dignissim sagittis at ac ligula. Donec suscipit ac augue id auctor. Morbi pharetra sagittis 
+                    turpis at tincidunt. Aenean venenatis gravida odio eu euismod. Etiam tortor urna, congue vel 
+                    felis vitae, pharetra commodo nunc. Suspendisse ultrices gravida augue, sit amet lobortis leo 
+                    ornare id. Vestibulum interdum elit quis lorem malesuada vestibulum. Donec lobortis elementum 
+                    nunc vitae fringilla. Proin tincidunt risus eu metus pellentesque tempor. Sed accumsan vulputate 
+                    sollicitudin. Vivamus ornare enim ut lobortis sollicitudin. Donec tincidunt nisl vitae tincidunt 
+                    faucibus. Maecenas vitae placerat neque, quis fermentum lectus.
+                </div>
+
+                <div class="col col-sm-12 col-md-5" id="p">
+                    Curabitur maximus, nibh eget mollis tincidunt, libero leo fermentum diam, id convallis libero
+                    velit et nisi. Ut dapibus quis lectus id auctor. Vestibulum imperdiet dolor velit, pellentesque
+                    imperdiet erat maximus nec. Etiam in elit dui. Pellentesque habitant morbi tristique senectus
+                    et netus et malesuada fames ac turpis egestas. Integer ultrices mi tristique tortor tempus
+                    pulvinar sit amet et mauris. Mauris mollis finibus felis eget suscipit. Orci varius natoque
+                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec leo elit, facilisis
+                    at felis sit amet, semper elementum mi. Donec congue libero non nibh consectetur vulputate.
+                    Nulla in enim sit amet turpis vulputate mollis. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. In hac habitasse platea dictumst.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="d-flex flex-wrap align-items-left">
+        <p>&copy; 2021 Paul Pollard</p>
+    </footer>
+</body>
+</html>
