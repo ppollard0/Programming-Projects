@@ -1,2 +1,0 @@
-Your scripts go in this directory.  After you add your first 
-script, delete this file.

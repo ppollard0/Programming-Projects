@@ -1,2 +1,0 @@
-Your images go in this directory.  After you add your first 
-image, delete this file. 
