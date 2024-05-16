@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Eel
+comment0.text=\r\n\ Eel\ class\ is\ the\ enemy\ character\r\n\ \r\n\ @author\ Paul\ Pollard\ \r\n\ @version\ 2/11/22\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Moves\ eel\ in\ a\ line\ and\ has\ them\ turn\ randomly\ when\ touching\ the\ edge\r\n\ and\ turning\ around\ when\ touching\ an\ Anemone.\r\n\ \r\n\ Eats\ clownfish\ when\ touching.\r\n
+comment2.params=meal
+comment2.target=void\ eatC(Clownfish)
+comment2.text=\r\n\ Removes\ the\ Clownfish\ class\ when\ eaten.\r\n
+numComments=3

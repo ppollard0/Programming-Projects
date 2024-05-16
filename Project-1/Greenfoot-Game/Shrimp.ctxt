@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Shrimp
+comment0.text=\r\n\ Shrimp\ class\ is\ the\ collectable\ for\ the\ player.\r\n\ \r\n\ @author\ Paul\ Pollard\ \r\n\ @version\ 2/11/22\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Moves\ shrimp\ in\ a\ line\ and\ has\ them\ turn\ randomly\ when\ touching\ the\ edge\r\n\ and\ turning\ around\ when\ touching\ an\ Anemone.\r\n
+numComments=2
