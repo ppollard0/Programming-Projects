@@ -1,0 +1,24 @@
+{
+  "name": "semester-project-ppollard0",
+  "version": "1.0.0",
+  "description": "Plantgram - Social media for plants.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DUCS-AppDevI/semester-project-ppollard0.git"
+  },
+  "author": "Paul Pollard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DUCS-AppDevI/semester-project-ppollard0/issues"
+  },
+  "homepage": "https://github.com/DUCS-AppDevI/semester-project-ppollard0#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.1",
+    "mongoose": "^6.1.0"
+  }
+}

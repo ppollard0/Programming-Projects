@@ -1,0 +1,13 @@
+#login {
+    background: var(--tertiaryColor);
+    max-width: 200px;
+    padding: 10px;
+    border: 5px solid var(--mainColor);
+    border-radius: 10px;
+}
+label {
+    text-align: left;
+}
+input {
+    margin: 5px;
+}

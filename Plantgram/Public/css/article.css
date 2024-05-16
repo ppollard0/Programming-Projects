@@ -1,0 +1,10 @@
+#main div {
+        background: var(--tertiaryColor);
+        padding: 10px;
+        border: 5px solid var(--mainColor);
+        border-radius: 10px;
+        border-spacing: 5px;
+}
+div p {
+    color: var(--letter);
+}

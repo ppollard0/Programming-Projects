@@ -1,0 +1,11 @@
+
+#left {
+    background-color: var(--mainColor);
+    color: var(--letters);
+}
+#mid {
+
+}
+#right {
+    background: var(--mainColor);
+}
