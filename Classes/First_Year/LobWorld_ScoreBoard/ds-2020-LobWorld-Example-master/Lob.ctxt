@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Lob
+comment0.text=\r\n\ A\ an\ instance\ of\ the\ Lob\ class\ is\ a\ lobster\ object.\r\n\ The\ lobster\ object\ moves\ in\ a\ simple\ random\ motion.\r\n\ \r\n\ @author\ S.\ Sigman\ \r\n\ @version\ v1.0\ 8/28/2020\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ turn\ the\ Lob\ object\ through\ a\ random\ angle\ that\ is\ between\ 0\ and\ (+/-)30\ \r\n\ degrees,\ and\ then\ move\ the\ Lob\ object\ AMOUNT_2_MOVE\ pixels\ on\ the\ screen.\ \r\n
+numComments=2
