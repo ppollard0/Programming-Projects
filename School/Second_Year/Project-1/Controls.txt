@@ -1,0 +1,5 @@
+Space to start
+N for next level
+L for lose
+W for win
+R for retry

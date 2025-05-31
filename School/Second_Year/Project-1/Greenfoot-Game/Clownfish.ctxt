@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Clownfish
+comment0.text=\r\n\ Clownfish\ class\ is\ the\ player\ character.\r\n\ \r\n\ @author\ Paul\ Pollard\ \r\n\ @version\ 2/11/22\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Controls\ fish\ to\ turn\ and\ move\ forwards\ and\ backwards.\r\n\ \r\n\ Eats\ shrimp\ when\ touching.\r\n
+comment2.params=meal
+comment2.target=void\ eatS(Shrimp)
+comment2.text=\r\n\ Removes\ the\ Clownfish\ class\ when\ eaten.\r\n
+numComments=3
