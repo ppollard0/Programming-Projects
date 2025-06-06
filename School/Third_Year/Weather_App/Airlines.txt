@@ -1,0 +1,41 @@
+use airlines;
+
+select * from aircraft;
+select * from certified;
+select * from employees;
+select * from flights;
+
+-- 1
+select distinct aircraft.aname from aircraft inner join employees 
+where aircraft.aid = (select aid from certified where eid = (select eid from employees where ename = 'Julie Govern'));
+
+-- 2
+select eid from certified where (select count(*) from certified group by eid limit 1) >= 3;
+select eid, count(*) from certified group by eid having count(eid>3);
+select count(*) from certified group by eid;
+
+-- 3
+select ename from employees where salary < (select price from flights where `from` = 'Los Angeles' and `to` = 'Honolulu' order by price limit 1);
+
+-- 4
+select * from aircraft where cruisingrange > 1000;
+select * from certified;
+select * from employees;
+
+-- 5
+select distinct ename from employees where eid = (select eid from certified where aid = (select aid from aircraft where aircraft.aname like '%Boeing%' limit 1));
+
+-- 6
+select aid from aircraft where cruisingrange > (select distance from flights where `from` = 'Los Angeles' and `to` = 'Chicago');
+
+-- 7
+select ename from employees;
+
+-- 8
+select departs from flights;
+
+-- 9
+select ename from employees, certified, aircrafts where employees.eid = certified.eid and certified.eid = (select eid from certified);
+
+-- 10
+select ename from employees;

@@ -1,0 +1,22 @@
+Users:
+	Email
+	Pass
+	LastLog
+	Created
+User-Location:
+	Email
+	Lid
+Location:
+	Zip
+	Lat
+	Long
+Weather-Data:
+	
+Journal-Entries:
+	Jid
+	Email
+	Date
+	Title
+	log
+Images:
+

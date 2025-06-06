@@ -1,0 +1,28 @@
+CREATE TABLE `Student` (
+`sid` int not null auto_increment,
+`lname` char(20) not null,
+`fname` char(20) not null,
+`class` char(2) not null,
+primary key (`sid`)
+);
+
+create table `course` (
+`cid` int not null auto_increment,
+`pgm` char(4) not null,
+`num` char(4) not null,
+`name` varchar(50) not null,
+primary key (`cid`)
+);
+
+create table `enrolled` (
+`sid` int,
+`cid` int,
+`grade` varchar(3),
+`sem` char(2),
+`year` int,
+primary key (`sid`, `cid`)
+);
+
+insert into  (lname, fname, class) values (Pollard, Paul, JR);
+
+delete student from tables;

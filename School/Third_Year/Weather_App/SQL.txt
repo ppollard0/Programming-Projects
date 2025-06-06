@@ -1,0 +1,14 @@
+Admin user: root password: MySQLDBA
+Start: mysqld -datadir="C:/ProgramData/MySQL/MYSQL Server 8.0\Data
+Stop: mysqladmin -u root -p shutdown
+
+select * from users;
+
+RESTful API
+	CRUD 	HTTP Verb    Return
+	-Create	- POST	     200 - ok
+	-Retreive 	- GET	     201 - created, ok
+	-Update	- PUT	     400 - user error
+	-Delete	-Delete	     500 - server error
+			     300 - Transfer (Mostly unused)
+			     100 - Info

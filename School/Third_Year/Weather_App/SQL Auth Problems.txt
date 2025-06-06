@@ -1,0 +1,6 @@
+If you get an error saying the auth method is wrong
+
+1. Login on workbench as root
+2. In query tab issue "Alter user `Username` Identified with mysql_native_password by 'login'"
+
+Error checking 1062

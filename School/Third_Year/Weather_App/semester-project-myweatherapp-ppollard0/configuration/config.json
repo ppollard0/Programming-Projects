@@ -1,0 +1,7 @@
+{
+    "host": "localhost",
+    "user":"weather2",
+    "password":"Herroitm3",
+    "database":"weather2",
+    "secret": "supersecret"
+}
