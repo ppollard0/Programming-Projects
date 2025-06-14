@@ -1,0 +1,7 @@
+{
+    "appName": "My_App",
+    "version": "1.0.0",
+    "environment": "development",
+    "apiBaseUrl": "http://localhost:3000/api",
+    "debug": true
+}
