@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-const port = 3500;
+const port = 5000;
 
 app.use(express.json());
 
@@ -14,10 +14,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api', (req, res) => {
-  res.status(200).json({
-    messages: {
-      M1: "Backend is Connected.",
-      M2: "This is also a message."
-    }
-  });
+  messages = [
+    "Backend is Connected.",
+    "This and the previous message are backend messages."
+  ]
+  res.status(200).json(messages);
 });

@@ -1,23 +1,6 @@
-import { React, useState, useEffect } from "react";
+import { React } from "react";
 
 export default function Home() {
-
-    const [data, setData] = useState(null);
-
-    useEffect( () => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("/", { cache: "no-store" });
-                console.log("Response JSON:", await response.json());
-            }
-            catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        }
-        console.log("Fetching data from API...");
-        fetchData();
-
-    }, []);
 
     return (
         <div>
@@ -25,7 +8,15 @@ export default function Home() {
                 <h1>Hello, Welcome to My App</h1>
             </div>
             <div className="body">
-                {data && <p>API Response: {data}</p>}
+                <div>
+                    <h3>Take a look around.</h3>
+                </div>
+                <div className="nav">
+                    <ul>
+                        <li><a href="/api">API</a></li>
+                        <li><a href="/fgbhjiosfnbpijsefrpnjbgsdf">Get Lost</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     );
