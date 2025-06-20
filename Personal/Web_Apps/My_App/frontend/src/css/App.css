@@ -1,0 +1,83 @@
+@import url(Colors.css);
+
+html, body, #root, .root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--light-text);
+    padding: 1vh;
+}
+
+.body {
+    flex: 1;
+    padding: 10vh 1vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: var(--primary);
+    color: var(--light-text);
+    width: 100%;
+    min-height: 120px;
+    display: flex;
+    padding: 0 1vh;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--link);
+}
+
+.bButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 10vh;
+    background-color: var(--primary);
+    color: var(--light-text);
+    border: none;
+    border-radius: 1vh;
+    padding: 2vh 1vh;
+    margin: 1vh;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bButton:hover {
+    background-color: var(--secondary);
+}
+
+.hButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 10vh;
+    background-color: var(--secondary);
+    color: var(--light-text);
+    border: none;
+    border-radius: 1vh;
+    padding: 2vh 1vh;
+    margin: 2vh;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bButton:hover {
+    background-color: var(--primary);
+}

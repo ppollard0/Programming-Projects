@@ -1,9 +1,10 @@
 import { React } from "react";
+import "../css/Home.css";
 
 export default function Home() {
 
     return (
-        <div>
+        <div className="root">
             <div className="header">
                 <h1>Hello, Welcome to My App</h1>
             </div>
@@ -12,11 +13,12 @@ export default function Home() {
                     <h3>Take a look around.</h3>
                 </div>
                 <div className="nav">
-                    <ul>
-                        <li><a href="/api">API</a></li>
-                        <li><a href="/fgbhjiosfnbpijsefrpnjbgsdf">Get Lost</a></li>
-                    </ul>
+                    <a className="bButton" href="/api">API</a>
+                    <a className="bButton" href="/fgbhjiosfnbpijsefrpnjbgsdf">Get Lost</a>
                 </div>
+            </div>
+            <div className="footer">
+                <p>© 2025 Paul Pollard. Not really copyrighted.</p>
             </div>
         </div>
     );

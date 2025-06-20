@@ -20,10 +20,10 @@ export default function APIPage() {
     }, []);
 
     return (
-        <div>
+        <div className="root">
             <div className="header">
-                <a href="/">Back Home</a>
                 <h1>Welcome to The API Page</h1>
+                <a className="hButton" href="/">Back Home</a>
             </div>
             <div className="body">
                 <div>
@@ -36,6 +36,9 @@ export default function APIPage() {
                     </div>
                 ))}                    
                 </div>
+            </div>
+            <div className="footer">
+                <p>© 2025 Paul Pollard. Not really copyrighted.</p>
             </div>
         </div>
     );

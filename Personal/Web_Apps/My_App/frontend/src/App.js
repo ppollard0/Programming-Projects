@@ -2,6 +2,7 @@
 import './css/index.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import './css/App.css';
 
 // Importing the page components
 import Home from './pages/Home';
